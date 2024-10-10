@@ -3,9 +3,11 @@
 import { Inter } from 'next/font/google';
 import localFont from 'next/font/local';
 import Head from 'next/head';
+import './globals.css';
 import AOS from 'aos';
 import { useEffect } from 'react';
 import 'aos/dist/aos.css';
+
 
 const inter = Inter({ subsets: ['latin'] });
 const satoshi = localFont({
