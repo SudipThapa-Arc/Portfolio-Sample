@@ -1,4 +1,7 @@
-import Image from "next/legacy/image"
+'use client'
+
+import React, { useEffect, useState } from 'react'
+import Image from 'next/image'
 
 const projects = [
   {
@@ -28,37 +31,50 @@ const projects = [
 ]
 
 export default function Projects() {
+  const [isScrolled, setIsScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY
+      const projectsSection = document.getElementById('projects')
+      if (projectsSection) {
+        const projectsTop = projectsSection.offsetTop
+        setIsScrolled(scrollPosition > projectsTop - window.innerHeight / 2)
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
   return (
-    <section id="projects" className="py-20 bg-gray-50">
+    <section id="projects" className="py-20 bg-gray-900">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold text-center mb-12" data-aos="fade-up">Projects</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <h2 className="text-3xl font-bold text-center mb-12 text-gray-100" data-aos="fade-up">Projects</h2>
+        <div className={`transition-all duration-1000 ease-in-out ${isScrolled ? 'grid grid-cols-1 md:grid-cols-2 gap-8' : 'flex overflow-x-auto pb-8'}`}>
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 ease-in-out hover:shadow-xl"
-              data-aos="fade-up"
-              data-aos-delay={index * 100}
+              className={`bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-all duration-500 ease-in-out ${
+                isScrolled ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-20'
+              } ${!isScrolled ? 'flex-shrink-0 w-80 mr-6' : ''}`}
+              style={{ transitionDelay: `${index * 100}ms` }}
             >
-              <div className="relative h-48 overflow-hidden">
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  layout="fill"
-                  objectFit="cover"
-                  className="transition-transform duration-300 ease-in-out hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <p className="text-white text-center p-4">{project.description}</p>
-                </div>
-              </div>
+              <Image
+                src={project.image}
+                alt={project.title}
+                width={400}
+                height={225}
+                className="w-full h-48 object-cover"
+              />
               <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
+                <h3 className="text-xl font-semibold mb-2 text-gray-100">{project.title}</h3>
+                <p className="text-gray-300 mb-4">{project.description}</p>
                 <a
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block mt-2 px-4 py-2 bg-teal-600 text-white rounded-md transition-colors duration-300 hover:bg-teal-700"
+                  className="inline-block px-4 py-2 bg-blue-600 text-white rounded-md transition-colors duration-300 hover:bg-blue-700"
                 >
                   View Project
                 </a>

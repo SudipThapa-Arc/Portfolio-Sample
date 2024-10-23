@@ -54,3 +54,17 @@ body {
 .footer-link {
   @apply text-gray-400 hover:text-gray-100 transition-colors;
 }
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 30s linear infinite;
+  min-width: 200%;
+}
