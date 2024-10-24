@@ -21,7 +21,7 @@ export default function HomePage() {
       <section
         className="relative pt-32 pb-20 px-4 bg-gradient-to-b from-gray-800 to-gray-900"
         style={{
-          backgroundImage: '../background.jpg', // Your background image
+          backgroundImage: '/background.jpg', // Your background image
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundAttachment: 'fixed',
