@@ -1,3 +1,5 @@
+'use client'
+
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 
@@ -21,14 +23,22 @@ export default function HomePage() {
       <section
         className="relative pt-32 pb-20 px-4 bg-gradient-to-b from-gray-800 to-gray-900"
         style={{
-          backgroundImage: './background.jpg', // Your background image
+          backgroundImage: 'url(/background.jpg)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundAttachment: 'fixed',
           opacity: opacity,
+          minHeight: '100vh',
+          width: '100%',
+          position: 'relative',
         }}
       >
-        <div className="container mx-auto text-center">
+        <div 
+          className="absolute inset-0 bg-black bg-opacity-50"
+          style={{ zIndex: 1 }}
+        />
+        
+        <div className="container mx-auto text-center relative" style={{ zIndex: 2 }}>
           <div className="relative w-32 h-32 mx-auto mb-4">
             <Image
               src="/zoro.png"
@@ -41,9 +51,9 @@ export default function HomePage() {
               Verified Expert
             </span>
           </div>
-          <h1 className="text-5xl font-bold mb-4">Full Stack Developer</h1>
+          <h1 className="text-5xl font-bold mb-6">Designer, Dev and Wizard</h1>
           <p className="text-xl text-gray-300 mb-8">
-            Over 5 years of experience crafting exceptional websites and robust applications
+            Years of experience crafting exceptional websites and robust applications
           </p>
         </div>
       </section>
