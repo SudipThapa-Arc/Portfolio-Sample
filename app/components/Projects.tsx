@@ -17,6 +17,12 @@ const projects = [
     link: 'https://eon-woad.vercel.app/'
   },
   {
+    title: 'Naya Dokan',
+    description: 'A modern e-commerce platform with comprehensive features.',
+    image: '/images/naya-dokan.jpg',
+    link: 'https://github.com/SudipThapa-Arc/Naya-Dokan'
+  },
+  {
     title: 'Asking Out Site',
     description: 'A fun, interactive site for asking someone out.',
     image: '/images/asking-out.jpg',

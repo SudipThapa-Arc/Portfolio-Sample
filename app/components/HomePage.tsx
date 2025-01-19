@@ -10,7 +10,7 @@ export default function HomePage() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      const newOpacity = 1 - scrollPosition / 500; // Adjust the denominator for more or less fade
+      const newOpacity = 1 - scrollPosition / 500;
       setOpacity(newOpacity > 0 ? newOpacity : 0);
     };
     window.addEventListener('scroll', handleScroll);
@@ -18,43 +18,69 @@ export default function HomePage() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gray-900 text-gray-100">
-      {/* Hero Section */}
+    <div className="min-h-screen bg-dark">
       <section
-        className="relative pt-32 pb-20 px-4 bg-gradient-to-b from-gray-800 to-gray-900"
+        className="relative min-h-screen flex items-center justify-center"
         style={{
           backgroundImage: 'url(/background.jpg)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundAttachment: 'fixed',
-          opacity: opacity,
-          minHeight: '100vh',
-          width: '100%',
-          position: 'relative',
+          backgroundBlendMode: 'overlay',
         }}
       >
-        <div 
-          className="absolute inset-0 bg-black bg-opacity-50"
-          style={{ zIndex: 1 }}
-        />
+        <div className="absolute inset-0 bg-gradient-to-b from-dark/40 to-dark/70" />
         
-        <div className="container mx-auto text-center relative" style={{ zIndex: 2 }}>
-          <div className="relative w-32 h-32 mx-auto mb-4">
+        <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
+          <div className="mb-8 relative inline-block">
+            <div className="absolute -inset-1 bg-gradient-to-r from-primary-400 to-primary-600 rounded-full blur opacity-75 animate-pulse" />
             <Image
               src="/zoro.png"
-              alt="Zoro"
-              width={128}
-              height={128}
-              className="rounded-full"
+              alt="Profile"
+              width={150}
+              height={150}
+              className="relative rounded-full border-2 border-white/10"
             />
-            <span className="absolute bottom-0 right-0 bg-green-500 text-xs text-white px-2 py-1 rounded-full">
-              Verified Expert
-            </span>
           </div>
-          <h1 className="text-5xl font-bold mb-6">Designer, Dev and Wizard</h1>
-          <p className="text-xl text-gray-300 mb-8">
-            Years of experience crafting exceptional websites and robust applications
+          
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-primary-400 to-primary-600 bg-clip-text text-transparent animate-fade-in drop-shadow-lg">
+            Designer, Dev & Wizard
+          </h1>
+          
+          <p className="text-xl md:text-2xl text-white mb-12 max-w-2xl mx-auto animate-slide-up drop-shadow-lg">
+            Crafting exceptional digital experiences through innovative design and development
           </p>
+          
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href="#projects"
+              className="px-8 py-3 bg-primary-600 hover:bg-primary-700 text-white rounded-lg transition-all duration-300 hover:scale-105 shadow-lg"
+            >
+              View My Work
+            </a>
+            <a
+              href="#contact"
+              className="px-8 py-3 bg-white/20 hover:bg-white/30 text-white rounded-lg transition-all duration-300 backdrop-blur-sm shadow-lg"
+            >
+              Contact Me
+            </a>
+          </div>
+        </div>
+        
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce-slow">
+          <svg 
+            className="w-6 h-6 text-white"
+            fill="none" 
+            stroke="currentColor" 
+            viewBox="0 0 24 24"
+          >
+            <path 
+              strokeLinecap="round" 
+              strokeLinejoin="round" 
+              strokeWidth={2} 
+              d="M19 14l-7 7m0 0l-7-7m7 7V3"
+            />
+          </svg>
         </div>
       </section>
     </div>

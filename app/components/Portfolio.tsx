@@ -26,7 +26,7 @@ const projects = [
   {
     title: 'Habitos',
     description: 'A feature-rich to-do list application built with Flutter.',
-    image: '/images/Habitos.jpg',
+    image: '/images/todo.png',
     link: 'https://habitos-pi.vercel.app/'
   },
   {
@@ -34,6 +34,12 @@ const projects = [
     description: 'A real-time weather application with a clean UI.',
     image: '/images/weather-app.jpg',
     link: 'https://weatheria-beta.vercel.app/'
+  },
+  {
+    title: 'Naya Dokan',
+    description: 'A modern e-commerce platform with comprehensive features.',
+    image: '/images/ecom.png',
+    link: 'https://github.com/SudipThapa-Arc/Naya-Dokan'
   },
   {
     title: 'EON AI',
@@ -57,54 +63,125 @@ const projects = [
 
 const testimonials = [
   {
-    name: "John Doe",
-    company: "Tech Innovators",
-    text: "Sudip delivered an outstanding web application that exceeded our expectations. His attention to detail and problem-solving skills are impressive.",
-    image: "/images/testimonials/john.jpg"
+    name: "Monkey D. Luffy",
+    post: "Captain of the Straw Hat Pirates",
+    role: "Future Pirate King",
+    text: "Sudip helped us build an amazing app to track our adventures and find the One Piece! His code is as strong as my Gear 5! Shishishi!",
+    image: "/images/luffy.jpg"
   },
   {
-    name: "Jane Smith",
-    company: "Creative Solutions",
-    text: "Working with Sudip was a pleasure. He understood our vision quickly and turned it into a beautiful, functional website. Highly recommended!",
-    image: "/images/testimonials/jane.jpg"
+    name: "Roronoa Zoro",
+    post: "First Mate & Swordsman",
+    role: "World's Strongest Swordsman",
+    text: "Despite my tendency to get lost in code repositories, Sudip's clean architecture and clear documentation always helped me find my way. His dedication to perfection matches my path to becoming the greatest swordsman.",
+    image: "/images/zoro.jpg"
   },
   {
-    name: "Mike Johnson",
-    company: "Digital Ventures",
-    text: "Exceptional developer with a keen eye for UI/UX. Sudip's work on our mobile app was outstanding and delivered on time.",
-    image: "/images/testimonials/mike.jpg"
+    name: "Nami",
+    post: "Navigator & Cartographer",
+    role: "Master Navigator",
+    text: "Sudip's attention to detail in UI design is as precise as my navigation skills. His projects are worth every berry we invested! The weather app he built is particularly impressive.",
+    image: "/images/namiswan.jpg"
   },
   {
-    name: "Sarah Williams",
-    company: "StartUp Hub",
-    text: "We've worked with many developers, but Sudip stands out for his professionalism and technical expertise. Would definitely work with him again!",
-    image: "/images/testimonials/sarah.jpg"
+    name: "Sanji",
+    post: "Chef of the Straw Hat Pirates",
+    role: "Master Chef",
+    text: "His code is as refined as my cooking. The recipe management system he developed for the Baratie would make even old man Zeff proud. Clean, efficient, and perfectly seasoned with features!",
+    image: "/images/sanji.jpg"
   }
 ]
 
-
 const articles = [
+  // Flutter & Dart Articles
   {
-    title: "The Future of React: What's Coming in React 18",
-    excerpt: "Explore the exciting new features and improvements coming in React 18, including automatic batching, new APIs, and more.",
-    date: "2024-10-15"
+    title: "Flutter State Management with Riverpod",
+    excerpt: "A comprehensive guide to managing state in Flutter applications using Riverpod, including practical examples and best practices.",
+    date: "2024-03-15",
+    link: "https://medium.com/@sudipthapa/flutter-state-management-with-riverpod",
+    category: "Flutter"
   },
   {
-    title: "Building Scalable Node.js Applications",
-    excerpt: "Learn best practices and architectural patterns for creating large-scale, maintainable Node.js applications.",
-    date: "2024-10-10"
+    title: "Building Custom Animations in Flutter",
+    excerpt: "Learn how to create stunning custom animations in Flutter using AnimationController and Transform widgets.",
+    date: "2024-03-10",
+    link: "https://medium.com/@sudipthapa/custom-animations-flutter",
+    category: "Flutter"
+  },
+  // React & JavaScript Articles
+  {
+    title: "Advanced React Patterns",
+    excerpt: "Deep dive into advanced React patterns including compound components, render props, and custom hooks.",
+    date: "2024-03-08",
+    link: "https://medium.com/@sudipthapa/advanced-react-patterns",
+    category: "React"
   },
   {
-    title: "The Future of React: What's Coming in React 18",
-    excerpt: "Explore the exciting new features and improvements coming in React 18, including automatic batching, new APIs, and more.",
-    date: "2024-10-15",
-    author: "Sudip Thapa",
-    authorImage: "/images/profile.jpg"
+    title: "Modern JavaScript Features",
+    excerpt: "Exploring the latest JavaScript features and how to use them effectively in your projects.",
+    date: "2024-03-05",
+    link: "https://medium.com/@sudipthapa/modern-javascript",
+    category: "JavaScript"
+  },
+  // Node.js Articles
+  {
+    title: "Building RESTful APIs with Node.js",
+    excerpt: "Complete guide to building scalable RESTful APIs using Node.js, Express, and MongoDB.",
+    date: "2024-02-28",
+    link: "https://medium.com/@sudipthapa/nodejs-rest-apis",
+    category: "Node.js"
   },
   {
-    title: "Machine Learning in Web Development",
-    excerpt: "Discover how machine learning can be integrated into web applications to create more intelligent and personalized user experiences.",
-    date: "2024-10-05"
+    title: "Node.js Performance Optimization",
+    excerpt: "Tips and techniques for optimizing Node.js applications for better performance.",
+    date: "2024-02-25",
+    link: "https://medium.com/@sudipthapa/nodejs-optimization",
+    category: "Node.js"
+  },
+  // Firebase Articles
+  {
+    title: "Firebase Authentication Deep Dive",
+    excerpt: "Implementing secure authentication in web applications using Firebase Auth.",
+    date: "2024-02-20",
+    link: "https://medium.com/@sudipthapa/firebase-auth",
+    category: "Firebase"
+  },
+  {
+    title: "Real-time Data with Firebase",
+    excerpt: "Building real-time applications using Firebase Realtime Database and Cloud Firestore.",
+    date: "2024-02-15",
+    link: "https://medium.com/@sudipthapa/firebase-realtime",
+    category: "Firebase"
+  },
+  // CSS Articles
+  {
+    title: "Modern CSS Layout Techniques",
+    excerpt: "Mastering CSS Grid, Flexbox, and modern layout patterns for responsive design.",
+    date: "2024-02-10",
+    link: "https://medium.com/@sudipthapa/modern-css",
+    category: "CSS"
+  },
+  {
+    title: "CSS Animation Masterclass",
+    excerpt: "Creating smooth and performant animations using CSS keyframes and transitions.",
+    date: "2024-02-05",
+    link: "https://medium.com/@sudipthapa/css-animations",
+    category: "CSS"
+  },
+  // Git Articles
+  {
+    title: "Git Workflow Best Practices",
+    excerpt: "Professional Git workflows and best practices for team collaboration.",
+    date: "2024-02-01",
+    link: "https://medium.com/@sudipthapa/git-workflow",
+    category: "Git"
+  },
+  {
+    title: "Advanced Git Commands",
+    excerpt: "Deep dive into powerful Git commands and features for better version control.",
+    date: "2024-01-28",
+    link: "https://medium.com/@sudipthapa/advanced-git",
+    category: "Git"
   }
 ]
 
@@ -180,9 +257,14 @@ export default function Portfolio() {
           </nav>
           <div className="flex items-center space-x-4">
             <span className="text-sm">{currentTime}</span>
-            <button className="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition-colors">
+            <a
+              href="mailto:js7096785@gmail.com?subject=Project%20Inquiry&body=Hi%20Sudip,%0D%0A%0D%0AI'd%20like%20to%20discuss%20a%20project%20with%20you.%0D%0A%0D%0AProject%20Details:%0D%0A-%20%0D%0A%0D%0ABest%20regards,"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition-colors"
+            >
               Start a Project
-            </button>
+            </a>
           </div>
         </div>
       </header>
@@ -259,34 +341,37 @@ export default function Portfolio() {
         className="py-20 bg-gray-800 opacity-0"
       >
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Client Testimonials</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">Clients Testimonials</h2>
           <div className="grid md:grid-cols-2 gap-8">
             {testimonials.map((testimonial, index) => (
               <div 
                 key={index} 
-                className="stagger-animation opacity-0 bg-gray-700 p-6 rounded-lg"
+                className="stagger-animation opacity-0 bg-gray-700/50 p-8 rounded-xl backdrop-blur-sm hover:transform hover:scale-105 transition-all duration-300"
               >
                 <div className="flex items-center mb-6">
-                  <Image
-                    src={testimonial.image}
-                    alt={testimonial.name}
-                    width={60}
-                    height={60}
-                    className="rounded-full mr-4"
-                  />
-                  <div>
-                    <div className="font-bold">{testimonial.name}</div>
-                    <div className="text-sm text-gray-400">{testimonial.company}</div>
+                  <div className="relative">
+                    <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full blur opacity-75" />
+                    <Image
+                      src={testimonial.image}
+                      alt={testimonial.name}
+                      width={60}
+                      height={60}
+                      className="relative rounded-full object-cover"
+                    />
+                  </div>
+                  <div className="ml-4">
+                    <div className="font-bold text-lg text-white">{testimonial.name}</div>
+                    <div className="text-sm text-blue-400">{testimonial.role}</div>
+                    <div className="text-sm text-gray-400">{testimonial.post}</div>
                   </div>
                 </div>
-                <FaQuoteLeft className="text-blue-400 text-3xl mb-4" />
-                <p className="mb-4">{testimonial.text}</p>
+                <FaQuoteLeft className="text-blue-400 text-2xl mb-4 opacity-50" />
+                <p className="text-gray-300 leading-relaxed">{testimonial.text}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
-
 
       {/* Articles Section */}
       <section 
@@ -296,30 +381,34 @@ export default function Portfolio() {
       >
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">Latest Articles</h2>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {articles.map((article, index) => (
-              <div 
-                key={index} 
-                className="stagger-animation opacity-0 bg-gray-800 p-6 rounded-lg"
+              <a
+                key={index}
+                href={article.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="stagger-animation opacity-0 bg-gray-800 p-6 rounded-lg transform transition-all duration-300 hover:scale-105 hover:bg-gray-750"
               >
-                {article.authorImage && article.author && (
-                  <div className="flex items-center mb-4">
-                    <Image
-                      src={article.authorImage}
-                      alt={article.author}
-                      width={40}
-                      height={40}
-                      className="rounded-full mr-3"
+                <div className="flex justify-between items-start mb-4">
+                  <span className="text-sm text-blue-400">{article.date}</span>
+                  <svg 
+                    className="w-5 h-5 text-gray-400" 
+                    fill="none" 
+                    stroke="currentColor" 
+                    viewBox="0 0 24 24"
+                  >
+                    <path 
+                      strokeLinecap="round" 
+                      strokeLinejoin="round" 
+                      strokeWidth={2} 
+                      d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" 
                     />
-                    <div>
-                      <div className="font-semibold">{article.author}</div>
-                      <div className="text-sm text-blue-400">{article.date}</div>
-                    </div>
-                  </div>
-                )}
-                <h3 className="text-xl font-bold mb-2">{article.title}</h3>
-                <p className="text-gray-400 mb-4">{article.excerpt}</p>
-              </div>
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold mb-2 text-white">{article.title}</h3>
+                <p className="text-gray-400">{article.excerpt}</p>
+              </a>
             ))}
           </div>
         </div>
