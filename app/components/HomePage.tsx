@@ -39,6 +39,7 @@ export default function HomePage() {
               alt="Profile"
               width={150}
               height={150}
+              priority
               className="relative rounded-full border-2 border-white/10"
             />
           </div>

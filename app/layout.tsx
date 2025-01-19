@@ -51,7 +51,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <Head>
         <title>Sudip Thapa - Design, Dev & Wizardry</title>
         <meta name="description" content="Sudip Thapa is a skilled web developer and designer specializing in creating immersive digital experiences. With expertise in React, Node.js, and modern web technologies, Sudip crafts innovative solutions that blend form and function." />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/zorojuro.ico" />
       </Head>
       <body className="bg-gray-900 text-gray-100">
         <Header />
