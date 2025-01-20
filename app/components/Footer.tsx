@@ -15,7 +15,7 @@ export default function Footer() {
             </Link>
             <p className="mt-4 text-gray-400 max-w-md">
               Crafting digital experiences through innovative design and development. 
-              Let's build something amazing together.
+              Let&apos;s build something amazing together.
             </p>
           </div>
 
