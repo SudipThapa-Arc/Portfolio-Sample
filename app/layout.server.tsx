@@ -3,13 +3,15 @@ import { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Sudip Thapa - Design, Dev & Wizardry',
   description: 'Sudip Thapa is a skilled web developer and designer specializing in creating immersive digital experiences.',
-  icons: {
-    icon: [
-      {
-        url: '/zorojuro.ico',
-        sizes: 'any',
-        type: 'image/x-icon',
-      },
-    ],
-  },
+  icons: [
+    {
+      rel: 'icon',
+      type: 'image/ico',
+      url: '/zorojuro.ico',
+    },
+    {
+      rel: 'apple-touch-icon',
+      url: '/zorojuro.ico',
+    }
+  ],
 }; 
